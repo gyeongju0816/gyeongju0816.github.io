@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  color: #ededed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: #e3e3e3;
+}
+
+/* Layout */
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f2f2f2 0%, #f2f2f2 40%, #111 40%, #111 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+}
+
+.page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 50% 60%,
+      rgba(255, 255, 255, 0.04),
+      transparent 60%
+    );
+  pointer-events: none;
+}
+
+.split-hero {
+  box-shadow:
+    0 32px 70px rgba(0, 0, 0, 0.45),
+    0 0 120px rgba(255, 255, 255, 0.06);
+}
+
+
+.canvas {
+  width: min(1400px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 4rem);
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+/* Nav */
+.hero-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  width: min(1200px, 100%);
+  background: transparent;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  margin-bottom: 1rem;
+}
+
+.hero-nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero-nav__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.hero-nav__links {
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero-nav__link {
+  transition: transform 0.25s ease, font-weight 0.25s ease;
+  font-weight: 400;
+}
+
+.hero-nav__link:hover,
+.hero-nav__link:focus-visible {
+  transform: scale(1.1);
+  font-weight: 600;
+}
+
+.hero-nav__link,
+.hero-nav__cta {
+  border: none;
+  background: transparent;
+  color: #111;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  text-decoration: none;
+}
+
+/* Hero */
+.split-hero {
+  width: min(1300px, 95vw);
+  max-width: 1300px;
+  height: 720px;
+  margin: 0 auto;
+  border-radius: 40px;
+  background: #dcdcdc;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 32px 70px rgba(0, 0, 0, 0.45);
+}
+
+.split-hero__left,
+.split-hero__right {
+  position: relative;
+  padding: 3rem;
+}
+
+.split-hero__left {
+  flex: 1;
+  background: #dedede;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  padding-bottom: clamp(1.5rem, 3vw, 3rem);
+}
+
+.split-hero__name {
+  margin: 0;
+  font-size: clamp(3rem, 4vw, 4.5rem);
+  letter-spacing: -0.01em;
+  color: #050505;
+}
+
+.split-hero__desc {
+  margin: 0;
+  color: #4d4d4d;
+  font-size: 1rem;
+}
+
+/* Contact cards */
+.contact-row {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  color: black;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
+}
+
+.contact-card__label {
+  font-weight: 700;
+  letter-spacing: 0.25em;
+}
+
+.contact-card__value {
+  font-weight: 400;
+  text-align: right;
+}
+
+.contact-card__value a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Right */
+.split-hero__right {
+  flex: 0 0 52%;
+  background: #050505;
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+
+.portrait {
+  width: 320px;
+  height: 460px;
+  border-radius: 20px;
+  background-color: #050505;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 6px solid #050505;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* ✅ Info panel */
+.info-panel {
+  width: min(1300px, 95vw);
+  max-width: 1300px;
+  margin: 1rem auto 0;
+  background: #0c0c0c;
+  color: #f5f5f5;
+  border-radius: 30px;
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+
+
+.info-panel__title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* 기술 태그 라인 */
+.info-panel__meta {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 0.9rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* 한 줄 설명 */
+.info-panel__caption {
+  margin: 0.9rem 0 0;
+  max-width: 980px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* Sections (routes pages) */
+.section {
+  width: min(1200px, 100%);
+  padding: 3rem;
+  margin: 2rem auto 0;
+  color: #f1f1f1;
+  border-radius: 24px;
+  background: #121212;
+}
+
+.section__content {
+  max-width: 960px;
+}
+
+.section--about {
+  background: #1c1c1c;
+}
+
+.section--skills {
+  background: #171717;
+}
+
+.section--portfolio {
+  background: #0f0f0f;
+}
+
+.section--contact {
+  background: #090909;
+  text-align: center;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .page {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-nav__links {
+    min-width: unset;
+    gap: 0.8rem;
+  }
+
+  .split-hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .split-hero__right {
+    flex: 1;
+    padding: 2rem;
+    clip-path: none;
+  }
+
+  .portrait {
+    width: 240px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  html,
+  body,
+  #root {
+    overflow: auto;
+  }
+
+  .hero-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .info-panel {
+    padding: 2rem 1.6rem;
+  }
+
+
+}
