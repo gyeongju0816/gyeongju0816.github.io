@@ -5,7 +5,6 @@ About / Tech Stack / Projects(TalkGrow, SportsAccess)로 구성되어 있습니�
 
 ## Demo
 - Live: https://gyeongju0816.github.io
-- (선택) PPT: /assets/portfolio.pdf
 
 ## Why
 정적인 PPT 포트폴리오를 “읽기 쉬운 구조의 웹 제품”으로 전환하며,
